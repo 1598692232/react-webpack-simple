@@ -4,7 +4,36 @@
   <meta charset="UTF-8">
   <title>React Test</title>
 </head>
-<body>
+<style>
+  button {
+    -webkit-app-region: no-drag;
+  }
+  #Controls {
+    -webkit-app-region: drag;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .screen {
+    -webkit-app-region: no-drag;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  #Controls:hover .screen {
+    display: none;
+  }
+  .titlebar {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+  }
+</style>
+<body style="-webkit-app-region: drag">
   <div id="content"></div>
   <script src="bundle.js"></script>
 </body>
